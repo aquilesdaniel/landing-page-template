@@ -1,0 +1,27 @@
+.btn {
+  border: none;
+  border-radius: 30px;
+
+  cursor: pointer;
+  padding: 18px 28px;
+
+  &:disabled {
+    opacity: 0.6;
+  }
+
+  &.primary {
+    color: white;
+    background: -webkit-linear-gradient(180deg, #0f172a, #475569);
+
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  &.secundary {
+    color: #0f172a;
+    background: white;
+
+    font-size: 10px;
+    font-weight: bold;
+  }
+}
