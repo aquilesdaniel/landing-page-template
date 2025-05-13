@@ -11,13 +11,19 @@
   </div>
   <form [formGroup]="newsletterForm">
     <label for="name">Name</label>
-    <input id="name" formControlName="name" />
+    <input
+      id="name"
+      formControlName="name"
+      placeholder="Digite seu nome completo"
+    />
     <label for="email">Email</label>
-    <input id="email" formControlName="email" />
+    <input id="email" formControlName="email" placeholder="Digite seu email" />
     <app-btn-primary
       btn-text="se inscreva"
       variant="secondary"
-      (click)="submit()"
+      (submit)="onSubmit()"
+      [disabled]="!newsletterForm.valid"
+      [loading]="loading()"
     ></app-btn-primary>
   </form>
 </section>
